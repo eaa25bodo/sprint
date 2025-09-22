@@ -145,6 +145,7 @@ nav a:hover::after {
     border-radius: 100px;
 }
 .times {
+    font-family: "myfont", sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
