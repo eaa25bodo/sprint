@@ -160,35 +160,40 @@ h3 {
     font-size: 0.9rem;
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.faq-item.active .faq-answer {
-  max-height: 200px; /* Adjust as needed */
+/* FAQ Item Bordered Lines */
+.faq-item {
+    border: 2px solid #DC97A8;
+    border-radius: 12px;
+    margin: 16px 0;
+    padding: 0;
+    background: #FAF2EF;
+    box-shadow: 0 2px 8px rgba(220,151,168,0.08);
+    overflow: hidden;
 }
 
 .faq-question {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+    padding: 18px 24px;
+    border-bottom: 1px solid #DC97A8;
+    background: #EEE4DD;
+    font-family: "myfont", sans-serif;
+    font-size: 1.15rem;
+    color: #103B4C;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.arrow {
-  transition: transform 0.3s;
+.faq-answer {
+    padding: 18px 24px;
+    background: #FAF2EF;
+    color: #103B4C;
+    font-size: 1rem;
+    border-radius: 0 0 12px 12px;
 }
-
-.faq-item.active .arrow {
-  transform: rotate(180deg);
-}
-
 
 footer {
     font-family: "myfont", sans-serif;
