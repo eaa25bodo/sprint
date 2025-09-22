@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeaway - Bluefin</title>
+    <link rel="stylesheet" href="takeaway.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Yuji+Syuku&display=swap" rel="stylesheet">
+</head>
+<body>
+        <nav>
+            <ul>
+                <link><a href="index.html"><img src="pictures/homepg_blu.svg" alt="homepg.blue"></a>
+                <link><a href="menu.html">Menu</a></link>
+                <link><a href="booking.html">Booking</a></link>
+                <link><a href="takeaway.html" class="active">Takeaway</a></link>
+                <link><a href="contact.html">Contact</a></link> 
+            </ul>
+        </nav>
+        <div class="hero">
+            <img src="pictures/takeaway.jpeg" alt="takeawaybox">
+        </div> 
+        <div class="takeaway-container">
+            <h1>Takeaway</h1>
+            <div class="how-to-order">
+                <h2>How to order</h2>
+                <p>To order takeaway, simply browse our menu and add your favorite dishes to the cart. When you're ready, proceed to checkout and fill in your details including name, email, phone number, pickup date, time, and preferred payment method. Confirm your order, and you will recieve a confirmation with all the details.</p>
+            </div>
+            <div class="menu-section">
+                <h2>Menu</h2>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="sushi">Sushi</button>
+                    <button class="category-btn" data-category="sashimi">Drinks</button>
+                    <button class="category-btn" data-category="nigiri">Hot dishes</button>
+                    <button class="category-btn" data-category="drinks">Desserts</button>
+                    <button class="category-btn" data-category="poke-bowls">Poke bowls</button>
+                    <button class="category-btn" data-category="kids-menu">Kids menu</button>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                    <img src="pictures/salmon carpaccio.jpg" alt="Salmon Carpaccio">
+                    <h3>salmon carpaccio</h3>
+                    <p>8 pcs 48 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/crabsticks.jpg" alt="Crabstick">
+                    <h3>crabstick</h3>
+                    <p>8 pcs 70 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/california.jpg" alt="California">
+                    <h3>california</h3>
+                    <p>8 pcs 48 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/tempurasalmon.jpg" alt="Tempura Laks">
+                    <h3>tempura laks</h3>
+                    <p>8 pcs 70 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/spicy tuna.jpg" alt="Spicy Tuna">
+                    <h3>spicy tuna (inside out)</h3>
+                    <p>8 pcs 70 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/california insideout.jpg" alt="California Inside Out">
+                    <h3>california (inside out)</h3>
+                    <p>8 pcs 70 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/totosalmon.jpg" alt="Toto Laks">
+                    <h3>toto laks</h3>
+                    <p>8 pcs 70 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+                <div class="menu-item">
+                    <img src="pictures/tuna insideout.jpg" alt="Tuna Inside Out">
+                    <h3>tuna (inside out)</h3>
+                    <p>8 pcs 70 kr.</p>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+         </div>  
+         <div class="cart-section">
+            <h2>Your Cart</h2>
+            <div class="cart-items">
+                <div class="class-item">
+                    <div class="item-info">
+                        <h4>California</h4>
+                        <p>8 pcs</p>
+                    </div>
+                    <div class="item-price">70kr.</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <div class="item-info">
+                        <h4>Crabsticks</h4>
+                        <p>8 pcs</p>
+                    </div>
+                     <div class="item-price">70 kr.</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="item-info">
+                        <h4>tempura laks</h4>
+                        <p>8 pcs</p>
+                    </div>
+                    <div class="item-price">70 kr.</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="item-info">
+                        <h4>spicy tuna (inside out)</h4>
+                        <p>8 pcs</p>
+                    </div>
+                    <div class="item-price">70 kr.</div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn">-</button>
+                        <span>1</span>
+                        <button class="quantity-btn">+</button>
+                    </div>
+                </div>   
+            </div>
+            <form class="checkout-form">
+                <div class="form-row">
+                    <input type="text" placeholder="First name" required>
+                    <input type="text" placeholder="Last name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone number" required>
+                </div>
+                <div class="form-row">
+                    <input type="date" placeholder="Pickup date" required>
+                    <select required>
+                        <option>Pickup time</option>
+                        <option>12:00</option>
+                        <option>12:30</option>
+                        <option>13:00</option>
+                        <option>13:30</option>
+                        <option>14:00</option>
+                        <!-- Add more time options -->
+                    </select>
+                </div>
+                <div class="form-row">
+                    <select required>
+                        <option>Payment info</option>
+                        <option>Cash</option>
+                        <option>MobilePay</option>
+                        <option>Credit Card</option>
+                    </select>
+                </div>
+                <div class="total">
+                    <p>Subtotal: <span>280 kr.</span></p>
+                </div>
+                <button type="submit" class="confirm-btn">Confirm</button>
+            </form>
+         </div>
+         <footer>
+             <div class="footer-content">
+            <div>
+                <h4>Opening hours</h4>
+                <p>Sun-Thu: 12:00 PM - 10:00 PM</p>
+                <p>Fri-Sat: 12:00 PM - 12:00 AM</p>
+            </div>
+            <div>
+                <h4>Contact information</h4>
+                <p><a href="tel:+4560692288">+45 60 69 22 88</a></p>
+                <p><a href="mailto:bluefinaarhus@gmail.com">bluefinaarhus@gmail.com</a></p>
+            </div>
+            <div>
+                <h4>Address</h4>
+                <p>Borups Allé 4C, 8000 Aarhus C</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/bluefinaarhus?locale=da_DK"><img src="pictures/facebook-logo-2.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/bluefin_sushi_og_gin/"><img src="pictures/instagram-logo-2.svg" alt="Instagram"></a>
+            </div>
+        </div>
+         </footer>
+</body>
+</html>

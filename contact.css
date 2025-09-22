@@ -1,0 +1,232 @@
+@font-face{
+ font-family: "myfont";
+ src: url(font/YujiSyuku-Regular.ttf) format("truetype");
+ font-weight: normal;
+ font-style: normal;
+}
+
+.hero {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    font-family: "myfont", sans-serif;
+    margin: 0%;
+    padding: 0;
+    background-color: #EEE4DD;
+    background-image: url(pictures/waves_pink.png);
+    color: #103B4C;
+    position: relative;
+    overflow-x: hidden;
+}
+
+nav {
+    background: #EEE4DD;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav img {
+    height: 15px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #103B4C;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav a.active {
+    color: #DC97A8;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #DC97A8;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    font-family: "myfont", sans-serif;
+    font-size: 4rem;
+    color: #103B4C;
+    margin: 20px 0 40px 0;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    font-family: "myfont", sans-serif;
+    font-size: 2rem;
+    color: #103B4C;
+    margin: 30px 0 20px 0;
+}
+
+h3 {
+    text-align: center;
+    font-family: "myfont", sans-serif;
+    font-size: 1.2rem;
+    color: #103B4C;
+    margin: 0;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    font-family: "myfont", sans-serif;
+    margin-bottom: 60px;
+    max-width: 100%;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.address-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.address-info h3 {
+    color: #DC97A8;
+    margin-bottom: 5px;
+}
+
+.address-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust as needed */
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+
+footer {
+    font-family: "myfont", sans-serif;
+    border-radius: 20px 20px 0px 0px;
+    background: #2C2C2C;
+    color: #F7F4F3;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content div {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+footer a {
+    color: #DC97A8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FAF2EF;
+}
