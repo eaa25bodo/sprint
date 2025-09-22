@@ -161,6 +161,29 @@ h3 {
 }
 
 /* FAQ Item Bordered Lines */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 20px;
+  color: #555;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust based on content length */
+  padding: 20px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(45deg); /* Turns "+" into "×" */
+}
+
+
 .faq-item {
     font-family: "myfont", sans-serif;
     border: 2px solid #DC97A8;
