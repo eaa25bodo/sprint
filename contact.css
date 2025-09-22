@@ -196,6 +196,7 @@ h3 {
 }
 
 .faq-question {
+    font-weight: bold;
     padding: 18px 24px;
     border-bottom: 1px solid #DC97A8;
     background: #EEE4DD;
