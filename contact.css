@@ -162,6 +162,7 @@ h3 {
 
 /* FAQ Item Bordered Lines */
 .faq-item {
+    font-family: "myfont", sans-serif;
     border: 2px solid #DC97A8;
     border-radius: 12px;
     margin: 16px 0;
