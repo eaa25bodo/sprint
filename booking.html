@@ -40,11 +40,11 @@
              <div class="time-slots">
                 <h3>Reservation time</h3>
                 <div class="times">
-                    <button>12:00</button><button>17:00</button>
-                    <button>13:00</button><button>18:00</button>
-                    <button>14:00</button><button>19:00</button>
-                    <button>15:00</button><button>20:00</button>
-                    <button>16:00</button><button>21:00</button>
+                    <button class="toggle-btn">12:00</button><button class="toggle-btn">17:00</button>
+                    <button class="toggle-btn">13:00</button><button class="toggle-btn">18:00</button>
+                    <button class="toggle-btn">14:00</button><button class="toggle-btn">19:00</button>
+                    <button class="toggle-btn">15:00</button><button class="toggle-btn">20:00</button>
+                    <button class="toggle-btn">16:00</button><button class="toggle-btn">21:00</button>
                 </div>
                 <p class="note">Please note that the restaurant closes at 22:00. Tables are released after 15 minutes if unclaimed.</p>
             </div>
@@ -101,5 +101,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
