@@ -151,6 +151,7 @@ nav a:hover::after {
 }
 
 .times button {
+    font-family: "myfont", sans-serif;
     padding: 10px;
     border: 1px solid #DC97A8;
     border-radius: 30px;

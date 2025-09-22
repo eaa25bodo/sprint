@@ -123,10 +123,10 @@
                         <p>8 pcs</p>
                     </div>
                     <div class="item-price">70 kr.</div>
-                    <div class="item-quantity">
-                        <button class="quantity-btn">-</button>
-                        <span>1</span>
-                        <button class="quantity-btn">+</button>
+                    <div class="counter">
+                        <button class="decrement">-</button>
+                        <span id="count">0</span>
+                        <button class="increment">+</button>
                     </div>
                 </div>
                 <div class="cart-item">
@@ -201,5 +201,19 @@
             </div>
         </div>
          </footer>
+         <script>
+            const countSpan = document.getElementById('count');
+            let count = 0;
+
+            document.getElementById('increment').addEventListener('click', () => {
+              count++;
+              countSpan.textContent = count;
+            });
+
+            document.getElementById('decrement').addEventListener('click', () => {
+              if (count > 0) count--;
+              countSpan.textContent = count;
+            });
+        </script>
 </body>
 </html>
