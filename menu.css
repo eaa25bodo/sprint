@@ -1,22 +1,22 @@
-@font-face{
- font-family: "myfont";
- src: url(font/YujiSyuku-Regular.ttf) format("truetype");
- font-weight: normal;
- font-style: normal;
+/* Font */
+@font-face {
+    font-family: "myfont";
+    src: url(font/YujiSyuku-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Navigation */
 nav {
     font-family: "myfont", sans-serif;
     background: #EEE4DD;
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 nav img {
     height: 15px;
     width: auto;
 }
-
 nav ul {
     display: flex;
     justify-content: space-around;
@@ -25,7 +25,6 @@ nav ul {
     margin: 0 auto;
     padding: 0;
 }
-
 nav a {
     text-decoration: none;
     color: #103B4C;
@@ -34,11 +33,9 @@ nav a {
     padding: 10px 0;
     position: relative;
 }
-
 nav a.active {
     color: #DC97A8;
 }
-
 nav a::after {
     content: '';
     position: absolute;
@@ -49,217 +46,205 @@ nav a::after {
     background-color: #DC97A8;
     transition: width 0.3s ease;
 }
-
 nav a:hover::after {
     width: 100%;
 }
 
-body{
-
+body {
     font-family: "myfont", sans-serif;
     font-size: 2rem;
     line-height: 1.5;
-    max-width: 100%;
     margin: 0;
     padding: 0;
     color: black;
-    background: #EEE4DD;
-    background-image: url(pictures/waves_pink.png);
-
-    font-family: "myfont", sans-serif;
+    background: #EEE4DD url(pictures/waves_pink.png) no-repeat center/cover fixed;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    background-image: url(pictures/waves_pink.png);  
-    background-repeat: no-repeat;             
-    background-position: center;             
-    background-size: cover;                   
-    background-attachment: fixed;   
-    
-}
-.hero-container{
- position:relative;
- width: 100%;
- height: 40vh;
- min-height:200px;
 }
 
-.hero-background{
-width: 100%;
-height: 100%;
-object-fit: cover;
+/* Hero Section */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 200px;
+}
+.hero-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-overlay {
+    position: absolute; 
+    top: -40%;
+    right: 0%;
+    width: 400px;
+    transform: scaleY(-1);      
+}
+.hero-title {
+    max-width: 1400px;
+    margin-left: calc(50vw - 700px); 
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: 4rem;
+    color: #103B4C;
+    font-family: "myfont", "Yuji Syuku", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    display: block;
 }
 
-.hero-overlay{
-  position: absolute; 
-  top: -40%;
-right: 0%;
-width: 400px;
-transform:scaleY(-1);      
-  
- 
-}
-.hero-title{
-color: #2C2C2C;
-font-family: "myfont", sans-serif;
-font-size: 6vw;
-font-style: normal;
-font-weight: 400;
-line-height: 1;}
-
-.specialoffers{
+/* Special Offers */
+.specialoffers {
     font-family: "myfont", sans-serif;
     display: flex;
     gap: 20px;
     margin-top: 5vh;
     align-items: center;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
 }
-
 .offerimages {
-    gap: 20px;
-  border-radius: 50px;       
-  overflow: hidden;           
-  display: inline-block;
+    border-radius: 50px;       
+    overflow: hidden;           
+    display: inline-block;
 }
-
 .offerimages img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
-
 .offerimages img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
-
-.offertext{
+.offertext {
     font-family: "myfont", sans-serif;
     margin-top: 10px;
     color: #FFF;
     font-size: 0.9rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 0px;
     display: flex;
     gap: 10px;
     align-items: center;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
     margin-bottom: 10px;
-    
 }
-
-.offerbox{
-    background-color: #9A9A9A ;
-    gap: 20px;
+.offerbox {
+    background-color: #9A9A9A;
     max-width: 200px;
     border-radius: 30px;
     width: 100%;
-    max-width: 200px;
     height: 38px;
     flex-shrink: 0;
     text-align: center;
-   
+}
+.offerbox:hover {
+    background-color: #2C2C2C;
 }
 
-.offerbox:hover{
-     background-color: #2C2C2C;
-}
-
-.menunavigation{
+/* Menu Navigation Tabs */
+.menunavigation {
     color: #FFF;
     text-align: center;
     font-family: "myfont", sans-serif;
     font-size: clamp(14px,2vw,20px);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
 }
-
-.menutab{
-display: flex;
-width: 153px;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-gap: 1 rem;
-height: 47px;
-padding: 0 1rem;
-background-color: #2C2C2C;
-
-border-radius: 50px;
-flex-shrink: 1;
-min-width: 100px;
-align-self: stretch;
-
-}
-
-.menutab:hover{
-    transform: scale(1.1);
-}
-
-.nav{
-  display: flex;
-  justify-content: center;    
-  align-items: center; 
-  margin-bottom: 20px;
-  flex-shrink: 1;
-  gap: 10 px;
-  flex-wrap: wrap;
-}
-
-.sushifotos{
-    border-radius: 30px;
-    width: 328px;
-    height: 250.634px;
-}
-.sushifotos:hover{
-    transform: scale(0.95);
-}
-
-.gallery{
+.menutab {
     display: flex;
+    width: 153px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2vw;;
-   
+    gap: 1rem;
+    height: 47px;
+    padding: 0 1rem;
+    background-color: #2C2C2C;
+    border-radius: 50px;
+    flex-shrink: 1;
+    min-width: 100px;
+    align-self: stretch;
 }
-.galleryrow{
+.menutab:hover {
+    transform: scale(1.1);
+}
+.nav {
     display: flex;
-    flex-direction: row;
+    justify-content: center;    
+    align-items: center; 
+    margin-bottom: 20px;
+    flex-shrink: 1;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Menu Items & Gallery */
+.menu-row {
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+    margin-bottom: 64px;
+}
+.menu-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap:75px;
+    width: 350px;
+}
+.sushifotos {
+    width: 330px;
+    height: 250px;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-bottom: 28px;
+    display: block;
+}
+.sushifotos:hover {
+    transform: scale(0.95);
+}
+.menu-item h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: "myfont", "Yuji Syuku", sans-serif;
+    margin: 0 0 10px 0;
+    color: #2C2C2C;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+.menu-item .description {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #A88B8B;
+    margin: 0 0 18px 0;
+    font-family: "myfont", "Yuji Syuku", sans-serif;
+    letter-spacing: 0.01em;
 }
 
-h1{
-    font-size: 32px;
+
+.menu-title {
+    max-width: 1400px;
+    margin-left: calc(50vw - 700px); 
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: 4rem;
+    color: #103B4C;
+    font-family: "myfont", "Yuji Syuku", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    display: block;
 }
 
-.card p.description{
-font-size: 15px;
-}
-
-.card{
-    width:330px;
-    
-    
-
-}
-.descriptionrow{
-    display: flex;
-    flex-direction: row;
-    gap: 75px;
-    margin-left: 152px;
-}
+/* Footer */
 footer {
     font-family: "myfont", sans-serif;
     font-size: medium;
@@ -269,35 +254,29 @@ footer {
     padding: 30px 0;
     text-align: center;
 }
-
 .footer-content {
     display: flex;
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .footer-content div {
     flex: 1;
     padding: 0 20px;
 }
-
 .social-icons {
     display: flex;
     gap: 15px;
     justify-content: center;
 }
-
 .social-icons img {
     width: 50px;
     height: 50px;
 }
-
 footer a {
     color: #DC97A8;
     text-decoration: none;
 }
-
 footer a:hover {
     color: #FAF2EF;
 }

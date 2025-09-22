@@ -1,40 +1,43 @@
-@font-face{
- font-family: "myfont";
- src: url(font/YujiSyuku-Regular.ttf) format("truetype");
- font-weight: normal;
- font-style: normal;
+@font-face {
+    font-family: "myfont";
+    src: url(font/YujiSyuku-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* General Styles */
-
 body {
     font-family: "myfont", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #EEE4DD;
     color: #103B4C;
+    background-image: url(pictures/waves_blue.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
-h1 {
-    font-family: "myfont", sans-serif;
+/* Headings */
+h1,
+.booking-container h1 {
+    font-family: "myfont", "Yuji Syuku", sans-serif;
     font-size: 4rem;
     color: #103B4C;
     text-align: left;
-    margin: 20px 0;
+    margin: 60px 0 40px 0;
 }
 
-
+/* Navigation */
 nav {
     background: #EEE4DD;
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 nav img {
     height: 15px;
     width: auto;
 }
-
 nav ul {
     display: flex;
     justify-content: space-around;
@@ -43,7 +46,6 @@ nav ul {
     margin: 0 auto;
     padding: 0;
 }
-
 nav a {
     text-decoration: none;
     color: #103B4C;
@@ -52,11 +54,9 @@ nav a {
     padding: 10px 0;
     position: relative;
 }
-
 nav a.active {
     color: #DC97A8;
 }
-
 nav a::after {
     content: '';
     position: absolute;
@@ -67,7 +67,6 @@ nav a::after {
     background-color: #DC97A8;
     transition: width 0.3s ease;
 }
-
 nav a:hover::after {
     width: 100%;
 }
@@ -81,36 +80,32 @@ nav a:hover::after {
 
 /* Booking Container */
 .booking-container {
-    max-width: 100%;
-    margin:  auto;
-    padding: 20px;
-    background: #EEE4DD;
-    background-image: url(pictures/waves_blue.png);
+    max-width: 1200px;
+    margin: 0 auto 15px auto;
+    padding: 0 10px;
+    background: transparent;
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
-
-
+/* Date & Time Section */
 .date-time-section {
     display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-    background-color: #EEE4DD;
-    border-radius: 10px;
+    gap: 80px;
+    margin-bottom: 60px;
 }
-
-.date-picker, .time-slots {
+.date-picker,
+.time-slots {
     flex: 1;
 }
 
+/* Calendar */
 .calendar {
     border: 1px solid #103B4C;
     border-radius: 5px;
     padding: 10px;
 }
-
 .calendar-header {
     color: #103B4C;
     display: grid;
@@ -119,38 +114,34 @@ nav a:hover::after {
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 .calendar-days {
     color: #103B4C;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
 }
-
 .calendar-days span {
     padding: 10px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    transition: background 0.2s;
 }
-
 .calendar-days span:hover {
     background: #DC97A8;
-    border-radius: 100px;
 }
-
 .calendar-days span.toggled {
     background: #2C2C2C;
     color: #FAF2EF;
-    border-radius: 100px;
 }
+
+/* Time Slots */
 .times {
     font-family: "myfont", sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-
 .times button {
     font-family: "myfont", sans-serif;
     padding: 10px;
@@ -159,25 +150,18 @@ nav a:hover::after {
     background: #DC97A8;
     cursor: pointer;
     font-weight: 600;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-
 .times button:hover {
     background: #103B4C;
     border-color: #103B4C;
 }
-
-.times button:active {
-    background: #2C2C2C;
-    border-color: #2C2C2C;
-    color: #FAF2EF;
-}
-
+.times button:active,
 .times button.toggled {
     background: #2C2C2C;
     border-color: #2C2C2C;
     color: #FAF2EF;
 }
-
 .times button:focus {
     outline: none;
     background: #DC97A8;
@@ -185,18 +169,15 @@ nav a:hover::after {
 
 /* Guest Info Form */
 .guest-info {
-    margin-top: 20px;
+    margin: 40px 0;
 }
-
 .form-row {
     max-width: 50%;
-    color: #FAF2EF;
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
 }
-
-.form-row input, 
+.form-row input,
 .form-row select,
 .form-row textarea {
     font-family: "myfont", sans-serif;
@@ -206,21 +187,21 @@ nav a:hover::after {
     border: 1px solid #FAF2EF;
     border-radius: 30px;
     font-size: 1rem;
+    background: #FAF2EF;
 }
-
 .form-row textarea {
-    color: #103B4C;
     height: 100px;
     resize: vertical;
 }
-
 .select {
     color: #103B4C;
     background-color: #FAF2EF;
     border-radius: 30px;
 }
 
-.book-btn {
+/* Buttons */
+.book-btn,
+.toggle-btn {
     font-family: "myfont", sans-serif;
     background: #2C2C2C;
     color: #FAF2EF;
@@ -229,32 +210,20 @@ nav a:hover::after {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    float: middle;
     margin-top: 10px;
+    transition: background 0.2s;
 }
-
-.book-btn:hover {
+.book-btn:hover,
+.toggle-btn:hover {
     background: #DC97A8;
 }
-
-.book-btn:active {
-    background: #103B4C;
-}
-
-.toggle-btn {
-  background: #DC97A8;
-  color: #FAF2EF;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+.book-btn:active,
 .toggle-btn.active {
-  background: #2C2C2C;
-  color: #FAF2EF;
+    background: #103B4C;
+    color: #FAF2EF;
 }
 
+/* Footer */
 footer {
     border-radius: 20px 20px 0px 0px;
     background: #2C2C2C;
@@ -262,37 +231,42 @@ footer {
     padding: 30px 0;
     text-align: center;
 }
-
 .footer-content {
     display: flex;
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .footer-content div {
     flex: 1;
     padding: 0 20px;
 }
-
 .social-icons {
     display: flex;
     gap: 15px;
     justify-content: center;
 }
-
 .social-icons img {
     width: 50px;
     height: 50px;
 }
-
 footer a {
     color: #DC97A8;
     text-decoration: none;
 }
-
 footer a:hover {
     color: #FAF2EF;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .booking-container {
+        padding: 0 10px;
+    }
+    .date-time-section {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 
