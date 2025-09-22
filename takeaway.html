@@ -123,10 +123,10 @@
                         <p>8 pcs</p>
                     </div>
                     <div class="item-price">70 kr.</div>
-                    <div class="counter">
-                        <button class="decrement">-</button>
-                        <span id="count">0</span>
-                        <button class="increment">+</button>
+                    <div class="quantity-btn">
+                        <button class="quantity-btn">-</button>
+                        <span>0</span>
+                        <button class="quantity-btn">+</button>
                     </div>
                 </div>
                 <div class="cart-item">
@@ -202,18 +202,59 @@
         </div>
          </footer>
          <script>
-            const countSpan = document.getElementById('count');
-            let count = 0;
+            document.querySelectorAll('.increment, .decrement').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const isIncrement = e.target.classList.contains('increment');
+                const counter = e.target.parentElement.querySelector('span');
+                let count = parseInt(counter.textContent);
 
-            document.getElementById('increment').addEventListener('click', () => {
-              count++;
-              countSpan.textContent = count;
+                if (isIncrement) {
+                count++;
+                } else if (count > 0) {
+                count--;
+                }
+                counter.textContent = count;
             });
+            });
+        </script>
+        <script>
+            document.querySelectorAll('.category-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    // Add active class to clicked button
+    button.classList.add('active');
+  });
+});
 
-            document.getElementById('decrement').addEventListener('click', () => {
-              if (count > 0) count--;
-              countSpan.textContent = count;
-            });
+        </script>
+        <script>
+           document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', (e) => {
+    const menuItem = e.target.closest('.menu-item');
+    const itemName = menuItem.querySelector('h3').textContent;
+    const itemPrice = menuItem.querySelector('p').textContent;
+
+    // Create a new cart item (clone or build dynamically)
+    const cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
+    cartItem.innerHTML = `
+      <div class="item-info">
+        <h4>${itemName}</h4>
+        <p>8 pcs</p>
+      </div>
+      <div class="item-price">${itemPrice}</div>
+      <div class="item-quantity">
+        <button class="quantity-btn">-</button>
+        <span>1</span>
+        <button class="quantity-btn">+</button>
+      </div>
+    `;
+    document.querySelector('.cart-items').appendChild(cartItem);
+  });
+});
         </script>
 </body>
 </html>
